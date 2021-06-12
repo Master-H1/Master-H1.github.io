@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<style>
+body {font-family: Elephant, Helvetica, sans-serif;
+background-image: url('images13.jpg');
+background-attachment: fixed;
+background-size: cover;
+}
+
+form {
+  border: 3px solid #f1f1f1;
+  font-family: Elephant;
+  width: 60%;
+}
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;}
+
+.container {
+  padding: 20px;
+  background-color:none;
+}
+
+input[type=text], input[type=submit] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  background: #f1f1f1;
+}
+
+input[type=checkbox] {
+  margin-top: 16px;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  border: none;
+  cursor: pointer;
+
+}
+button {
+  background-color:green;
+  color: white;
+  padding: 14px ;
+  margin: 8px ;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.5;
+}
+</style>
+<body>
+<button onclick="document.getElementById('m').style.display='block'" style="width:auto;">Subsribe</button>
+
+<div id="m" class="modal">
+<form action="photo.html"style="margin-left:auto;max-width:300px">
+
+  <span onclick="document.getElementById('m').style.display='none'" class="close" title="Close Modal">&times;</span>
+
+
+  
+    If you need more motivational quotes <br>
+    and more ideas for rules of success!
+
+  <div class="container" style="background-color:none">
+    <input type="text" placeholder="Full Names"required><br>
+    <input type="text" placeholder="Email address"required><br>
+    <label>
+      <input type="checkbox" checked="checked" name="subscribe"> Daily Motives
+    </label>
+  </div>
+
+  <div class="container">
+    <input type="submit" value="Subscribe">
+  </div>
+</form>
+<script>
+var modal = document.getElementById('m');
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+<p><center><button><a href="index.html">BACK HOME</a></button></center></p>
+</body>
+</html>
